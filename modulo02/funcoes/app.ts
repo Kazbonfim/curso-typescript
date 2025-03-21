@@ -58,3 +58,22 @@ for (let index = 0; index < listaTarefas.length; index++) {
     const element = listaTarefas[index];
     console.log(element);
 }
+
+// => 3. Prática com interfaces, para a criação de objetos
+// Vamos criar uma interface, que será o molde para jogos variados, no formato de objeto
+
+// Defininto um contrato sintático, através de interfaces
+interface Titulo {
+    nomeTitulo: string,
+    dataLancamento: Date,
+    plataforma: string, 
+    genero: string[],
+};
+
+// Usando aquele contrato, para instanciar objetos/entidades
+const jogo1: Titulo = {
+    nomeTitulo: 'The Legend of Zelda: Ocarina of Time',
+    dataLancamento: new Date('1998/11/23'),
+    plataforma: 'Nintendo 64',
+    genero: ['ação', 'aventura']
+};
